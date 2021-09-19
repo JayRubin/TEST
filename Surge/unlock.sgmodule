@@ -17,7 +17,7 @@
 
 [Script]
 # 羞羞漫画VIP
-http-response ^http:\/\/c\.banghankeji\.com\/common\/MemberInfo\/getEntityByCode requires-body=1,script-path=https://raw.githubusercontent.com/qianmo001/ACL4SSR/rm/xxmhvip.js
+http-response ^http:\/\/c\.banghankeji\.com\/common\/MemberInfo\/getEntityByCode requires-body=1,script-path=https://raw.githubusercontent.com/JayRubin/TEST/main/scripts/xxmhvip.js
 
 # 去微信公众号广告 (By Choler)
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
