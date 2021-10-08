@@ -22,9 +22,6 @@
 ^https:\/\/fdfs.xmcdn.com\/group24\/M07\/C4\/3D\/ url reject
 ^https:\/\/fdfs.xmcdn.com\/group25\/M05\/92\/D1\/ url reject
 
-# 知乎去广告
-https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad) url reject-200
-
 # Mi
 ^https?:\/\/api.m.mi.com\/.+\/app\/start url reject
 ^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/homepage_ad\? url reject
@@ -135,12 +132,6 @@ wxgg= requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD
 wbgg = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/weibo/launch.js, type=http-response, pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
 wbgg = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/weibo/ad.js, type=http-response, pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count)
 
-# 羞羞漫画vip
-xxmh = requires-body=1, script-path=https://raw.githubusercontent.com/qianmo001/ACL4SSR/rm/xxmhvip.js, type=http-response, pattern=^http:\/\/c\.banghankeji\.com\/common\/MemberInfo\/getEntityByCode
-
-# 知音漫客vip
-zymk = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/Zymh.js, type=http-response, pattern=^https:\/\/(userpurchased|user-api)\.zymk\.cn\/v\d\/(userpurchased\/paychapters|getuserinfo)\/
-
 # 酷我音乐vip
 kwyy = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/kuwo.js, type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
 
@@ -161,14 +152,8 @@ wps = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD
 # 有道云笔记vip
 ydybj = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/ydybj.js, type=http-response, pattern=^https://note.youdao.com/yws/(mapi/payment|api/self)
 
-# 知乎去广告vip
-zh-1 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/people.js, type=http-response, pattern=^https://api.zhihu.com/people/self$
-zh-2 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/people1.js, type=http-response, pattern=^https://api.zhihu.com/market/people/self
-zh-3 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/mine_personal.js, type=http-response, pattern=^https://api.zhihu.com/bazaar/mine/personal$
-zh-4 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/tab_header.js, type=http-response, pattern=^https://api.zhihu.com/bazaar/tab_header$
-zh-5 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/feed.js, type=http-response, pattern=https://api.zhihu.com/moments/recommend
-zh-6 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/recommend.js, type=http-response, pattern=https://api.zhihu.com/topstory/recommend
-zh-7 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/answer.js, type=http-response, pattern=https://api.zhihu.com/v4/questions
+# 百度王盘vip
+bdwp = requires-body=1, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js, type=http-response, pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user
 
 
 [MITM]
