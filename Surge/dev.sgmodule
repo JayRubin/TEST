@@ -1,12 +1,11 @@
 #!name=Dev Unlock VIP
-#!desc=Script for Surge iOS [ update time: 2021-10-15 16:20:07 ]
+#!desc=Script for Surge iOS [ update time: 2021-10-19 15:38:10 ]
 #!system=ios
 
 [URL Rewrite]
 ^http:\//api.infzm.com\/mobile\/activity\/banner\?position url reject
 ^http:\//ggc.cmvideo.cn\/v1\/iflyad\/ url reject
 ^http:\//nas.infzm.com\/api\/advertising  url reject
-^http?:\/\/business\.msstatic\.com\/advertiser\/material url reject
 ^https://api.douban.com\b.*\/common_ads\?.* url reject
 ^https://news.l.qq.com\/app\? url reject
 ^https://only\b.*nstool.netease.com\/info.js\?referer=https:\/\/nstool.netease.com\/info.js url reject
@@ -50,7 +49,6 @@
 ^https:\/\/aweme.snssdk.com\/service\/1\/app_logout\/ url reject
 ^https:\/\/aweme.snssdk.com\/service\/2\/app_log url reject
 ^https:\/\/bdsp-x.jd.com\/adx\/ url reject
-^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.jpg url reject
 ^https:\/\/elemecdn.com\/.+\/sitemap url reject
 ^https:\/\/fdfs.xmcdn.com\/group21\/M03\/E7\/3F\/ url reject
 ^https:\/\/fdfs.xmcdn.com\/group21\/M0A\/95\/3B\/ url reject
@@ -88,7 +86,6 @@
 ^https:\/\/m.360buyimg.com\/mobilecms\/s640x1136_jfs\/ url reject
 ^https:\/\/m.elecfans.com\/static\/js\/ad.js url reject
 ^https:\/\/m5.amap.com\/ws\/valueadded\/ url reject
-^https:\/\/m\.ctrip\.com\/restapi\/.+\/json\/tripAds url reject
 ^https:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
 ^https:\/\/p\d.meituan.net\/(mmc|wmbanner)\/ url reject
 ^https:\/\/p\d.pstatp.com\/origin url reject
@@ -109,26 +106,15 @@
 ^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/training_video_ad\? url reject
 ^https?:\/\/api.m.mi.com\/.+\/app\/start url reject
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url reject
 ^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(interfaceAdMonitor|interfaceAd)\/ url reject
 ^https?:\/\/i.ys7.com\/api\/ads url reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jpg\.webp)$ url reject
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture url reject
 ^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+\.jpg\?may_covertWebp url reject
-^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ url reject
 ^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4) url reject
-^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement.*$ url reject
 ^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo\? url reject
-https://ad.12306.cn/* url reject
 https://api.bilibili.com/x/v2/dm/ad url reject-200
-https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad) url reject-200
 https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)) url reject-200
-https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
-https://fbchina.flipchina.cn/v2/ad/query/* url reject
-https://homefront.qunar.com/front/splash/ad url reject
-https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do url reject
-https:\/\/appconf\.mail\.163\.com\/mmad\/get\.do url reject
 
 [Script]
 0001 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/360.js, type=http-response, pattern=^https:\//ad.life.360.cn\/v2\/app\/advertisement\/
