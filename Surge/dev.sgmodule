@@ -1,5 +1,5 @@
 #!name=Dev Unlock VIP
-#!desc=Script for Surge iOS [ update time: 2021-10-19 16:03:39 ]
+#!desc=Script for Surge iOS [ update time: 2021-10-19 16:25:00 ]
 #!system=ios
 
 [URL Rewrite]
@@ -48,6 +48,7 @@
 ^https:\/\/aweme.snssdk.com\/service\/1\/app_logout\/ url reject
 ^https:\/\/aweme.snssdk.com\/service\/2\/app_log url reject
 ^https:\/\/bdsp-x.jd.com\/adx\/ url reject
+^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.jpg url reject
 ^https:\/\/elemecdn.com\/.+\/sitemap url reject
 ^https:\/\/fdfs.xmcdn.com\/group21\/M03\/E7\/3F\/ url reject
 ^https:\/\/fdfs.xmcdn.com\/group21\/M0A\/95\/3B\/ url reject
