@@ -1,1 +1,262 @@
+#!name=Dev Unlock VIP
+#!desc=Script for Surge iOS [ update time: 2021-10-21 17:29:46 ]
+#!system=ios
 
+[URL Rewrite]
+^http:\//ggc.cmvideo.cn\/v1\/iflyad\/ url reject
+^http:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad\/.+ url reject-200
+^http?:\/\/business\.msstatic\.com\/advertiser\/material url reject
+^http[s]?:\/\/.+?\/apix\/app\/message url reject-200
+^http[s]?:\/\/api.(txt2021|kaqcn).(buzz|com)\/api\/user\/voucher url reject-200
+^http[s]?:\/\/api\.kegk\.cn\/api\/app\/user\/qrcode url reject-200
+^http[s]?:\/\/qa666\.xyz\/ul url reject-200
+^https://api.douban.com\b.*\/common_ads\?.* url reject
+^https://news.l.qq.com\/app\? url reject
+^https://only\b.*nstool.netease.com\/info.js\?referer=https:\/\/nstool.netease.com\/info.js url reject
+^https://support.you.163.com\/appversync\/check.do\?app_ver=.* url reject
+^https:\//ad.jia.360.cn\/advertisement\/ url reject
+^https:\//adapi.shouji.360.cn\/IOSCommercial url reject
+^https:\//commercial.shouji.360.cn\/Commercial url reject
+^https:\//creatives\.ftacademy\.cn\/ads url reject
+^https:\//d1025gvspu57dc.cloudfront.net\/log\/new_log.php url reject
+^https:\//home.mi.com\/cgi-op\/api\/v1\/recommendation\/banner* url reject
+^https:\//jia.360.cn\/conf\/btm-ad.json url reject
+^https:\//pages.xiaohongshu.com\/data\/native\/matrix_switches* url reject
+^https:\//www.xiaohongshu.com\/api\/sns\/v1\/ads\/apple\/record* url reject
+^https:\//www.xiaohongshu.com\/api\/sns\/v1\/tag\/ads_engage* url reject
+^https:\//www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource* url reject
+^https:\/\/(\d{1,3}.){1,3}\d{1,3}\/view\/dale-online\/dale_ad\/ url reject
+^https:\/\/(wshapi|api)\.(huiyangongfang|sumsun|klettdayeare|kjregister|gzbbcg)\.(top|com)\/api\/banner\/show url reject-200
+^https:\/\/(wshapi|api)\.(huiyangongfang|sumsun|klettdayeare|kjregister|gzbbcg)\.(top|com)\/api\/vip\/newshow url reject-200
+^https:\/\/*\.kuaihuoapi\.com\/appApi\/getPubConfig url reject-200
+^https:\/\/.+.pstatp.com\/img\/ad url reject
+^https:\/\/.+.snssdk.com\/api\/ad\/ url reject
+^https:\/\/.+\.58cdn\.com\.cn\/brandads\/ url reject
+^https:\/\/.+\/allOne.php\?ad_name url reject
+^https:\/\/.+\/client?functionId=lauch\/lauchConfig&appName=paidaojia url reject
+^https:\/\/.+\/img\/ad.union.api\/ url reject
+^https:\/\/.+\/v1\/iflyad\/ url reject
+^https:\/\/106.39.169.231\/client\.action\?functionId=start url reject
+^https:\/\/a.qiumibao.com\/activities\/config.php url reject
+^https:\/\/adse.+.com\/[a-z]{4}\/loading\?appid= url reject
+^https:\/\/adse.ximalaya.com\/ting\/feed\?appid= url reject
+^https:\/\/adse.ximalaya.com\/ting\/loading\?appid= url reject
+^https:\/\/adse.ximalaya.com\/ting\?appid= url reject
+^https:\/\/api.douban.com\/v2\/app_ads\/common_ads url reject
+^https:\/\/api.jr.mi.com\/v1\/adv\/ url reject
+^https:\/\/api.m.mi.com\/v1\/app\/start url reject
+^https:\/\/api\..+\.cc\/shorter\/resource\/getStartPageList url reject-200
+^https:\/\/api\.papa\w+\.com\/live\/api\/home\/announcement\/v1\/list url reject-200
+^https:\/\/app\.58\.com\/api\/home\/advertising\/ url reject
+^https:\/\/app\.58\.com\/api\/home\/appadv\/ url reject
+^https:\/\/app\.58\.com\/api\/home\/invite\/popupAdv url reject
+^https:\/\/app\.58\.com\/api\/log\/ url reject
+^https:\/\/aweme.snssdk.com\/aweme\/v1\/aweme\/stats\/ url reject
+^https:\/\/aweme.snssdk.com\/aweme\/v1\/device\/update\/ url reject
+^https:\/\/aweme.snssdk.com\/aweme\/v1\/screen\/ad\/ url reject
+^https:\/\/aweme.snssdk.com\/service\/1\/app_logout\/ url reject
+^https:\/\/aweme.snssdk.com\/service\/2\/app_log url reject
+^https:\/\/bdsp-x.jd.com\/adx\/ url reject
+^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.jpg url reject
+^https:\/\/elemecdn.com\/.+\/sitemap url reject
+^https:\/\/fdfs.xmcdn.com\/group21\/M03\/E7\/3F\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group21\/M0A\/95\/3B\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group22\/M00\/92\/FF\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group22\/M05\/66\/67\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group22\/M07\/76\/54\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group23\/M01\/63\/F1\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group23\/M04\/E5\/F6\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group23\/M07\/81\/F6\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group23\/M0A\/75\/AA\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group24\/M03\/E6\/09\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group24\/M07\/C4\/3D\/ url reject
+^https:\/\/fdfs.xmcdn.com\/group25\/M05\/92\/D1\/ url reject
+^https:\/\/frodo.douban.com\/api\/v2\/movie\/banner url reject
+^https:\/\/frontier.snssdk.com\/ url reject
+^https:\/\/fuss10.elemecdn.com\/.+.mp4 url reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} url reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} url reject
+^https:\/\/games.mobileapi.hupu.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)\/(hotkey|init|hupuBbsPm). url reject
+^https:\/\/games.mobileapi.hupu.com\/interfaceAdMonitor url reject
+^https:\/\/ggic*.miguvideo.com/ad/ url reject
+^https:\/\/ggic.cmvideo.cn\/ad\/ url reject
+^https:\/\/ggic2.cmvideo.cn\/ad\/ url reject
+^https:\/\/ggv.cmvideo.cn\/v1\/iflyad\/ url reject
+^https:\/\/gw.alicdn.com\/mt\/ url reject
+^https:\/\/gw.alicdn.com\/tfs\/.+-1125-1602 url reject
+^https:\/\/gw.alicdn.com\/tfs\/.+\d{3,4}-\d{4} url reject
+^https:\/\/gw.alicdn.com\/tps\/.+\d{3,4}-\d{4} url reject
+^https:\/\/i1.hoopchina.com.cn\/blogfile\/.+_\d{3}x\d{4} url reject
+^https:\/\/i\d.hoopchina.com.cn\/blogfile\/\/d+\/\/d+\/BbsImg.(?<=(big.(png|jpg)))$ url reject
+^https:\/\/imeclient.openspeech.cn\/adservice\/ url reject
+^https:\/\/img.jiemian.com\/ads\/ url reject
+^https:\/\/img12.360buyimg.com.+width=\d{4}&height=\d{4} url reject
+^https:\/\/img\d.doubanio.com\/view\/dale-online\/dale_ad\/ url reject
+^https:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ url reject
+^https:\/\/j-image\.missfresh\.cn\/img_(.+)\.gif$ url reject
+^https:\/\/lanm\.huliyinzi\.com\/.+\/.+\/index url reject-200
+^https:\/\/m.360buyimg.com\/mobilecms\/s640x1136_jfs\/ url reject
+^https:\/\/m.elecfans.com\/static\/js\/ad.js url reject
+^https:\/\/m5.amap.com\/ws\/valueadded\/ url reject
+^https:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$ url reject
+^https:\/\/m\.ctrip\.com\/restapi\/.+\/json\/tripAds url reject
+^https:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
+^https:\/\/ma-adx\.ctrip\.com\/_ma\.gif url reject
+^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare url reject
+^https:\/\/mda\..+\.site\/api\/auth\/startupAdv url reject-200
+^https:\/\/mmt\.maimaitom\.com\/assets\/adlist\/.+ url reject-200
+^https:\/\/p\d.meituan.net\/(mmc|wmbanner)\/ url reject
+^https:\/\/p\d.pstatp.com\/origin url reject
+^https:\/\/pask\.bozhenshu\.cn\/.+\/.+\/index url reject-200
+^https:\/\/pb\d.pstatp.com\/origin url reject
+^https:\/\/sf\w-ttcdn-tos.pstatp.com\/obj\/web.business.image url reject
+^https:\/\/www1.elecfans.com\/www\/delivery\/ url reject
+^https?://p\.du\.163\.com/readtime/info.json url reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject
+^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz= url reject-img
+^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w url reject-img
+^https?:\/\/.+\/videos\/other\/ url reject
+^https?:\/\/[\w-]+\.googlevideo\.com\/((?!(dclk_video_ads|videoplayback)).)+&(oad|ctier) url reject
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+(&oad|ctier) url reject
+^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat= url reject
+^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/homepage_ad\? url reject
+^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/sleep_ad\? url reject
+^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/sport_ad\? url reject
+^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/sport_summary_ad\? url reject
+^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/sport_training_ad\? url reject
+^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/step_detail_ad\? url reject
+^https?:\/\/api-mifit.huami.com\/discovery\/mi\/discovery\/training_video_ad\? url reject
+^https?:\/\/api.m.mi.com\/.+\/app\/start url reject
+^https?:\/\/api\.(heyihongmu|9aixuan)\.(net|com)\/index\/Get\/(appStartAdvert|getSlide|getAdvert|notice) url reject-200
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? url reject-dict
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
+^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) url reject-dict
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist url reject-dict
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr url reject-dict
+^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject-dict
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(interfaceAdMonitor|interfaceAd)\/ url reject
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. url reject-img
+^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor url reject-img
+^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther url reject
+^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner url reject-dict
+^https?:\/\/i.ys7.com\/api\/ads url reject
+^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} url reject-img
+^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ url reject-img
+^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
+^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jpg\.webp)$ url reject
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash url reject-dict
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture url reject
+^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+\.jpg\?may_covertWebp url reject
+^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ url reject
+^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4) url reject
+^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement.*$ url reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo\? url reject
+https://ad.12306.cn/* url reject
+https://api.bilibili.com/x/v2/dm/ad url reject-200
+https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
+https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad) url reject-200
+https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)) url reject-200
+https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
+https://fbchina.flipchina.cn/v2/ad/query/* url reject
+https://homefront.qunar.com/front/splash/ad url reject
+https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do url reject
+https:\/\/appconf\.mail\.163\.com\/mmad\/get\.do url reject
+
+[Script]
+0001 = requires-body=1, script-path=https://6678888.xyz/quantumultX/2496.js, type=http-response, pattern=^http:\/\/api_2496\.kuwo\.cn\/front\/user\/vipstatus
+0002 = requires-body=1, script-path=https://6678888.xyz/quantumultX/50du.js, type=http-response, pattern=^http:\/\/(.+)\.fiftymvapi\.(.+):8080\/api\.php\/api\/user\/userinfo
+0003 = requires-body=1, script-path=https://6678888.xyz/quantumultX/50duh.js, type=http-response, pattern=^https:\/\/m3u8\.91-tv\.me\/.+
+0004 = requires-body=1, script-path=https://6678888.xyz/quantumultX/69sp.js, type=http-response, pattern=^http:\/\/api\.winzetta\.cn\/api\/user\/personal
+0005 = requires-body=1, script-path=https://6678888.xyz/quantumultX/blbl.js, type=http-response, pattern=^https:\/\/biliapi\..+\.com\/api\/app\/user\/info
+0006 = requires-body=1, script-path=https://6678888.xyz/quantumultX/blg.js, type=http-response, pattern=^http?:\/\/1\.blg\d{3}\.xyz\/api\/(video\/index\/details|user\/profile\/index|user\/Profile\/index)
+0007 = requires-body=1, script-path=https://6678888.xyz/quantumultX/blsp.js, type=http-response, pattern=^http:\/\/api\.myb6api\.(.+):8080\/api\.php\/api\/users\/getBaseInfo
+0008 = requires-body=1, script-path=https://6678888.xyz/quantumultX/dpsq.js, type=http-response, pattern=^http:\/\/lfwmkj\.com\/(api\/user\/personal|api\/community\/edit)
+0009 = requires-body=1, script-path=https://6678888.xyz/quantumultX/hlwa.js, type=http-response, pattern=^https:\/\/stat\.liquidlink\.cn\/api\/v2\/ios\/(.+)\/stats\/events
+0010 = requires-body=1, script-path=https://6678888.xyz/quantumultX/javdbs.js, type=http-response, pattern=^https:\/\/(yugedu|xinshengcomunity|jiuyuly|biubiucloud|biubiucloud|javdb10|myopenwarehouse)\.com\/api\/v1\/users
+0011 = requires-body=1, script-path=https://6678888.xyz/quantumultX/jiateng.js, type=http-response, pattern=^https:\/\/api\..+\.cc\/shorter\/(user\/(.+)|video\/(.+)|resource\/getWindowNotice)
+0012 = requires-body=1, script-path=https://6678888.xyz/quantumultX/kuwo.js, type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
+0013 = requires-body=1, script-path=https://6678888.xyz/quantumultX/leisi.js, type=http-response, pattern=^http:\/\/kfjdmjg\.com\/api\/v2\/user
+0014 = requires-body=1, script-path=https://6678888.xyz/quantumultX/mbfm.js, type=http-response, pattern=^http:\/\/wx\.voxpie\.com\/(api/fmapp_user|api/fmapp_bookinfo)
+0015 = requires-body=1, script-path=https://6678888.xyz/quantumultX/mddsp.js, type=http-response, pattern=^https:\/\/mda\..+\.site\/api\/(auth\/login|mine\/myHome|wallet\/query)
+0016 = requires-body=1, script-path=https://6678888.xyz/quantumultX/mlsp.js, type=http-response, pattern=^https:\/\/awmattack\.(.+)\.com\/(api/member/info|api/video/video/video_play)
+0017 = requires-body=1, script-path=https://6678888.xyz/quantumultX/papa.js, type=http-response, pattern=^https:\/\/api\.papa\w+\.com(\/video\/api\/movie\/v2\/(play|[0-9]+)|\/video\/api\/movie\/v2\/cache)
+0018 = requires-body=1, script-path=https://6678888.xyz/quantumultX/pear.js, type=http-response, pattern=^https:\/\/(cn.youku-ca.com|bkcd\.b-cdn.net|souhu.mett.me|m.pearkin.com|www.baidu.com2.club)\/(api\/movie\/WatchMovieNew|api\/account\/IsVip|api\/account\/IndexDetail)
+0019 = requires-body=1, script-path=https://6678888.xyz/quantumultX/plpl.js, type=http-response, pattern=^https:\/\/api\.(cqmingmohui|meirigengxin|zgjizhi|zdhndz|qihaofs|gngbidding|jxtgsy)\.(com|net)\/v1\/user\/(info|promote/info)
+0020 = requires-body=1, script-path=https://6678888.xyz/quantumultX/shenhua.js, type=http-response, pattern=^https:\/\/shapi\.(.+)\.(com|cn)\/api\/video\/user\/data
+0021 = requires-body=1, script-path=https://6678888.xyz/quantumultX/shenhuaads.js, type=http-response, pattern=^https:\/\/shapi\.(.+)\.(com|cn)\/api\/video\/(banner|ad|picture)
+0022 = requires-body=1, script-path=https://6678888.xyz/quantumultX/shenhuatc.js, type=http-response, pattern=^https:\/\/shapi\.(.+)\.(com|cn)\/api\/video\/config\?field=notice
+0023 = requires-body=1, script-path=https://6678888.xyz/quantumultX/smtvip.js, type=http-response, pattern=^http[s]?:\/\/api\.mtaoapi006\.(org|com):8080\/api\.php\/api\/users\/getBaseInfo
+0024 = requires-body=1, script-path=https://6678888.xyz/quantumultX/sub.js, type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+0025 = requires-body=1, script-path=https://6678888.xyz/quantumultX/subs.js, type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts)
+0026 = requires-body=1, script-path=https://6678888.xyz/quantumultX/tanhua.js, type=http-response, pattern=^https:\/\/1008610010\.laikanshu\.top\/Member\/getUserInfo
+0027 = requires-body=1, script-path=https://6678888.xyz/quantumultX/tantan.js, type=http-response, pattern=^http:\/\/iykhb\.xyz:8080\/tantan\/mobile\/tantan\/user\/login
+0028 = requires-body=1, script-path=https://6678888.xyz/quantumultX/wxmiaoy.js, type=http-response, pattern=^https:\/\/www\.shencut\.com\/api\/.+\/user\/profile
+0029 = requires-body=1, script-path=https://6678888.xyz/quantumultX/xincs.js, type=http-response, pattern=^https:\/\/(wshapi|api)\.(huiyangongfang|sumsun|klettdayeare|kjregister|gzbbcg)\.(top|com)\/api\/user\/profile\/
+0030 = requires-body=1, script-path=https://6678888.xyz/quantumultX/ysvip.js, type=http-response, pattern=^https?://api.(heyihongmu|9aixuan).(net|com)/index/User/ucenter
+0031 = requires-body=1, script-path=https://6678888.xyz/quantumultX/zcdsh.js, type=http-response, pattern=^http:\/\/www\.winnerbook\.com\.cn\/zcdshmobile\/.+
+0032 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js, type=http-response, pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi
+0033 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js, type=http-response, pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
+0034 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js, type=http-response, pattern=^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_new\?
+0035 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js, type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
+0036 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js, type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
+0037 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js, type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?
+0038 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js, type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
+0039 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, type=http-response, pattern=^https?:\/\/app-api\.smzdm\.com\/util\/update
+0040 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, type=http-response, pattern=^https?:\/\/article-api\.smzdm\.com\/article\/index_home_page
+0041 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, type=http-response, pattern=^https?:\/\/haojia-api\.smzdm\.com\/home\/list
+0042 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, type=http-response, pattern=^https?:\/\/homepage-api\.smzdm\.com\/home
+0043 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, type=http-response, pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/list
+0044 = requires-body=1, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js, type=http-response, pattern=^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?
+0045 = requires-body=1, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js, type=http-response, pattern=^https:\/\/api\.rr\.tv\/ad\/getAll
+0046 = requires-body=1, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js, type=http-response, pattern=^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail
+0047 = requires-body=1, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js, type=http-response, pattern=^https:\/\/api\.rr\.tv\/user\/privilege\/list
+0048 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/360.js, type=http-response, pattern=^https:\//ad.life.360.cn\/v2\/app\/advertisement\/
+0049 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/58/index.js, type=http-response, pattern=^https:\//app.58.com\/api\/ucenter\/v2\/index
+0050 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/58/infor.js, type=http-response, pattern=^https:\//passport.58.com\/58\/user/\info
+0051 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/CamScanner.js, type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
+0052 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/DiDaQingDan.js, type=http-response, pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status
+0053 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/PicsArt.js, type=http-response, pattern=^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json
+0054 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/VUE.js, type=http-response, pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare)
+0055 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/Wechat.js, type=http-response, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
+0056 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/XMind.js, type=http-response, pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
+0057 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/Zymh.js, type=http-response, pattern=^https:\/\/(userpurchased|user-api)\.zymk\.cn\/v\d\/(userpurchased\/paychapters|getuserinfo)\/
+0058 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js, type=http-response, pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax
+0059 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/bilibili/account.js, type=http-response, pattern=https://app.bilibili.com/x/v2/account/mine\?access_key
+0060 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/bilibili/feed.js, type=http-response, pattern=https://app.bilibili.com/x/v2/feed/index\?access_key
+0061 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/bilibili/live.js, type=http-response, pattern=https://api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom\?access_key
+0062 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/bilibili/reply.js, type=http-response, pattern=https://api.bilibili.com/x/v2/reply/main\?access_key
+0063 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/bilibili/tab.js, type=http-response, pattern=https://app.bilibili.com/x/resource/show/tab\?access_key
+0064 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/bilibili/view_relate.js, type=http-response, pattern=https://app.bilibili.com/x/v2/view\?access_key
+0065 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js, type=http-response, pattern=^https:\//dxy.com\/app\/i\/user\/ask\/account\?ac
+0066 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/ft.js, type=http-response, pattern=^https:\//d1025gvspu57dc.cloudfront.net\/index.php\/jsapi\/paywall
+0067 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/kuwo.js, type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
+0068 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/maimai/detail.js, type=http-response, pattern=^https:\//open.taou.com\/maimai\/member\/uh\/get_member_info_ios_v3
+0069 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/maimai/mypage.js, type=http-response, pattern=^https:\//maimai.cn\/bizmember\/vip_center\/me_tab_page_banner
+0070 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/ability.js, type=http-response, pattern=^https:\//v.miguvideo.com\/ability\/v
+0071 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/memberinfo.js, type=http-response, pattern=^https:\//v.miguvideo.com\/ability\/v2\/member-info
+0072 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/shimo.js, type=http-response, pattern=^https:\//shimo.im\/lizard-api\/users\/me
+0073 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/tianya/vip.js, type=http-response, pattern=^https:\//www.tianya.cn\/api\/vas\?method=vipUser.isVipUser
+0074 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/tianya/vip1.js, type=http-response, pattern=https:\//www.tianya.cn\/m\/vip\/
+0075 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/vsco.js, type=http-response, pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/
+0076 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/weibo/ad.js, type=http-response, pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count)
+0077 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/weibo/launch.js, type=http-response, pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
+0078 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/wnl.js, type=http-response, pattern=^https:\//r.51wnl-cq.com\/Api\/User\/GetExtInfo
+0079 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/wnyd.js, type=http-response, pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json
+0080 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/wps.js, type=http-response, pattern=^https://account.wps.cn/api/users/
+0081 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/ydybj.js, type=http-response, pattern=^https://note.youdao.com/yws/(mapi/payment|api/self)
+0082 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zgtyzb.js, type=http-response, pattern=^http:\/\/rest\.zhibo\.tv\/room\/get\-pull\-stream\-info\-v430
+0083 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/answer.js, type=http-response, pattern=https://api.zhihu.com/v4/questions
+0084 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/feed.js, type=http-response, pattern=https://api.zhihu.com/moments/recommend
+0085 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/mine_personal.js, type=http-response, pattern=^https://api.zhihu.com/bazaar/mine/personal$
+0086 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/people.js, type=http-response, pattern=^https://api.zhihu.com/people/self$
+0087 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/people1.js, type=http-response, pattern=^https://api.zhihu.com/market/people/self
+0088 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/recommend.js, type=http-response, pattern=https://api.zhihu.com/topstory/recommend
+0089 = requires-body=1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/zhihu/tab_header.js, type=http-response, pattern=^https://api.zhihu.com/bazaar/tab_header$
+0090 = requires-body=1, script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js, type=http-response, pattern=^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$
+0091 = requires-body=1, script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, type=http-request, pattern=^http://.+/amdc/mobileDispatch
+0092 = requires-body=1, script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, type=http-response, pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig)
+0093 = requires-body=1, script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, type=http-response, pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail
+
+[MITM]
+hostname = %APPEND% *.bdstatic.com,*.bilibili.com,*.djshow.cn,*.esz-wine.com,*.fiftymvapi.*:8080,*.googlevideo.com,*.hoopchina.com,*.kuaihuoapi.com,*.uve.weibo.com,*.vberdo.com,*.zcg170.cn,*.zyapp.xyz,*jia.360.cn,*nstool.netease.com,1.blg\d{3}.xyz,1008610010.laikanshu.top,175.24.98.160,2-api.duopinsm.com,2-api.xiaoxi37.com,2-api.yousuilife.com,58cdn.com,82.157.31.178,a.qiumibao.com,account.huami.com,account.wps.cn,acs.m.taobao.com,ad.12306.cn,ad.life.360.cn,adapi.shouji.360.cn,adse.ximalaya.com,aig.aigzg.com,aiqicha.baidu.com,alicdn.com,amap.com,ap*.intsig.net,api-01.apiselifan11.com,api-01.sssggg666.com:8089,api-as.leavon.cn,api-hlw.*.com,api-mifit.huami.com,api.9aixuan.com,api.bdawnvr.xyz,api.bilibili.com,api.cqmingmohui.com,api.cxlwhz.com,api.douban.com,api.fiftymvapi.com,api.fiftymvapi.com:8080,api.flctkc.com,api.gngbidding.com,api.gzbbcg.com,api.hbytfdj.com,api.heyihongmu.net,api.jisudaigou.com,api.jttv01.cc,api.jttv02.cc,api.jxtgsy.com,api.jyjnsc.com,api.kaqcn.com,api.kegk.cn,api.kjregister.com,api.klettdayeare.com,api.live.bilibili.com,api.lu2.asia,api.m.jd.com,api.m.mi.com,api.md-ddd1.com,api.md-ddd2.com,api.md-ddd3.com,api.md-ddd4.com,api.meiease.c*,api.meirigengxin.com,api.moapi.site,api.moapi1.club,api.moapi1.online,api.mtaoapi006.com,api.mtaoapi006.org,api.myb6api.*:8080,api.ojbk123.com,api.overtp.com,api.papa???.com,api.picsart.c*,api.qhbsxxkj.com,api.qihaofs.com,api.rcljx.com,api.revenuecat.com,api.rr.tv,api.shanzhili.net,api.shimada-dl.com,api.sumsun.top,api.syclzg.cn,api.txt2021.buzz,api.v1.chuniao.me,api.vc.bilibili.com,api.vuevideo.net,api.weibo.cn,api.winzetta.cn,api.zdhndz.net,api.zgjizhi.com,api.zhihu.com,api.zjooooo888.com:8089,api.zzyyhyy.cn,api1000.dindang18.com,api1000.gdqeb.club,api50.fiftymvapi.com:8080,api50w.shltezb.com,api_2496.kuwo.cn,apic.*.me,apid.9waquan.com,apid.duorelie.com,apid.fjqiangxu.com,apid.jsjaydl.com,apit.sbxsjw.com,apki.*.me,app-api.smzdm.com,app.*.me,app.58.com,app.ap.d3yuiw4.com,app.bilibili.com,app.pear--app.com,app.qdjdswkj.com,appapi.mcmgsa.com,appconf.mail.163.com,article-api.smzdm.com,avapp.*.me,aweme.snssdk.com,awmattack.*.com,bdsp-x.jd.com,biliapi.*.com,biubiucloud.com,biubiucloud.com.api.*.cc,bkcd.b-cdn.net,business.msstatic.com,buy.itunes.apple.com,capis*.didapinche.com,capis.didapinche.com,cmvideo.cn,cn.youku-ca.com,commercial.shouji.360.cn,creatives.ftacademy.cn,d1025gvspu57dc.cloudfront.net,d2.lttmt.com,data.flurry.com,ddapp.cukeindia.work,dida365.com,dl-cu-hz.lechange.cn,doubanio.com,dxy.com,elecfans.com,elemecdn.com,fbchina.flipchina.cn,fdfs.xmcdn.com,frodo.douban.com,games.mobileapi.hupu.com,ggic08.miguvideo.com,goblin.hupu.com,haojia-api.smzdm.com,haojia.m.smzdm.com,home.mi.com,homefront.qunar.com,homepage-api.smzdm.com,hoopchina.com.cn,hybrid.ximalaya.com,i.ys7.com,imeclient.openspeech.cn,img.jiemian.com,img12.360buyimg.com,ipa.angtrend.com,ipa.sdmskt.com,iykhb.xyz:8080,j-image.missfresh.cn,javdb10.com,jiuyuly.com,jk.5apk.cn,kfjdmjg.com,lanm.huliyinzi.com,lfwmkj.com,m.360buyimg.com,m.ctrip.com,m.ximalaya.com,m.ytmqzl.c,m3u8.91-tv.me,ma-adx.ctrip.com,maimai.cn,mapi.weibo.com,mbd.baidu.com,mda.*.site,meituan.net,mmt.maimaitom.com,mobile.da.mgtv.com,mobwsa.ximalaya.com,ms.jr.jd.com,mtapp.*.me,myopenwarehouse.com,new.vip.weibo.cn,new.zzyyhyy.cn,news.l.qq.com,note.youdao.com,oomort.tianduier.com,open.taou.com,p.du.163.com,pages.xiaohongshu.com,pask.bozhenshu.cn,passport.58.com,play.googleapis.com,pstatp.com,pv.dakawm.cc,qa666.xyz,qqc005.com,r.51wnl-cq.com,rest.zhibo.tv,rich.kuwo.cn,s-api.smzdm.com,s.*.com,s.youtube.com,shapi.*.cn,shapi.*.com,shapi.bvaqnfm.cn,shimo.im,spclient.wg.spotify.com,stat.liquidlink.cn,streamf.*.com,support.you.163.com,ticktick.com,trade-acs.m.taobao.com,user*.zymk.cn,v.icbc.com.cn,v.miguvideo.com,vicky-asleep.51aidianli.net,vip1.kuwo.cn,vsco.co,wmapi.meituan.com,wshapi.huiyangongfang.com,www.googleapis.com,www.govchengdu.cn,www.govxian.cn,www.shencut.com,www.t1ir6.vip,www.tianya.c,www.winnerbook.com.cn,www.xiaohongshu.com,www.xmind.cn,www.youtube.com,www.zhihu.com,wx.voxpie.com,xinshengcomunity.com,youtubei.googleapis.com,yugedu.com,zone.guiderank-app.com
