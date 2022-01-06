@@ -1,5 +1,5 @@
 #!name=Dev Unlock VIP
-#!desc=Script for Surge iOS [ update time: 2022-01-04 17:29:07 ]
+#!desc=Script for Surge iOS [ update time: 2022-01-06 11:01:12 ]
 #!system=ios
 
 [URL Rewrite]
@@ -8,6 +8,7 @@
 ^http:\//ggc.cmvideo.cn\/v1\/iflyad\/ url reject
 ^http:\/\/(www.)?aicoin\.cn\/$ https://www.aicoin.com/ 302
 ^http?:\/\/business\.msstatic\.com\/advertiser\/material url reject
+^http?:\/\/business\.msstatic\.com\/advertiser\/material url reject-dict
 ^https://api.douban.com\b.*\/common_ads\?.* url reject
 ^https://api.xiaoyi.com\/v5\/app\/config\?userid=.* url reject
 ^https://api.xiaoyi.com\/v5\/app\/mobile\/ads url reject
@@ -231,6 +232,7 @@
 ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jpg\.webp)$ url reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
+^https?:\/\/lchttpapi\.xczim\.com\/1\.1\/functions\/getLaunchImageForIOS url reject-dict
 ^https?:\/\/logoshejishi\.mairuan\.com\/ https://www.sothink.com/product/logo-design-software/ 302
 ^https?:\/\/m5.amap.com\/ws\/valueadded\/ url reject
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ url reject
