@@ -21,6 +21,8 @@ DOMAIN-SUFFIX,google.com,failback
 DOMAIN-SUFFIX,gitlab.com,Proxy
 DOMAIN-SUFFIX,github.com,Proxy
 DOMAIN-SUFFIX,githubusercontent.com,Proxy
+DOMAIN-SUFFIX,raw.githubusercontent.com,Proxy
+DOMAIN-SUFFIX,jsdelivr.net,Proxy
 DOMAIN-SUFFIX,cdn.jsdelivr.net,Proxy
 DOMAIN-SUFFIX,pypi.org,Proxy
 DOMAIN-SUFFIX,adguard.com,Proxy
