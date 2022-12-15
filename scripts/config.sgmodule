@@ -3,8 +3,6 @@
 #!system=ios
 
 [Rule]
-# Default
-AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
 # Unbreak
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,DIRECT
 # Download
