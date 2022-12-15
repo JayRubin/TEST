@@ -110,3 +110,6 @@ mzstatic.com = server:119.29.29.29
 *.apple.com.edgekey.net = server:119.29.29.29
 *.apple.com.edgekey.net.globalredir.akadns.net = server:119.29.29.29
 *icloud.com.akadns.net = server:119.29.29.29
+
+[MITM]
+hostname = %APPEND% www.google.cn, www.g.cn
