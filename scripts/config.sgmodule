@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge iOS [ update time: 2022-12-15 22:30:00 ]
+#!desc=Script for Surge iOS [ update time: 2023-01-08 14:30:00 ]
 
 [Rule]
 # Unbreak
@@ -19,8 +19,10 @@ PROCESS-NAME,WebTorrent Helper,DIRECT
 DOMAIN-SUFFIX,google.com,failback
 DOMAIN-SUFFIX,gitlab.com,Proxy
 DOMAIN-SUFFIX,github.com,Proxy
-DOMAIN-SUFFIX,raw.githubusercontent.com,Proxy
-DOMAIN-SUFFIX,cdn.jsdelivr.net,Proxy
+DOMAIN,raw.githubusercontent.com,Proxy
+DOMAIN,cdn.jsdelivr.net,Proxy
+DOMAIN-SUFFIX,githubusercontent.com,Proxy
+DOMAIN-SUFFIX,jsdelivr.net,Proxy
 DOMAIN-SUFFIX,pypi.org,Proxy
 DOMAIN-SUFFIX,adguard.com,Proxy
 DOMAIN-SUFFIX,adtidy.org,Proxy
