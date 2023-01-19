@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-01-18 14:30:00 ]
+#!desc=Script for Surge [ update time: 2023-01-18 15:00:00 ]
 
 [Rule]
 # Unbreak
@@ -27,7 +27,7 @@ DOMAIN-SUFFIX,pypi.org,Proxy
 DOMAIN-SUFFIX,adguard.com,Proxy
 DOMAIN-SUFFIX,adtidy.org,Proxy
 # Unreachable Custom
-DOMAIN-SUFFIX,18comic.cc,failback
+DOMAIN,18comic.cc,failback
 # Proxy
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,Proxy
