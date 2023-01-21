@@ -15,7 +15,7 @@ PROCESS-NAME,uTorrent,DIRECT
 PROCESS-NAME,UUBooster,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
 PROCESS-NAME,WebTorrent Helper,DIRECT
-# Unreachable
+# Unreachable DOMAIN
 DOMAIN,google.com,failback
 DOMAIN,gitlab.com,Proxy
 DOMAIN,github.com,Proxy
@@ -24,6 +24,15 @@ DOMAIN,cdn.jsdelivr.net,Proxy
 DOMAIN,pypi.org,Proxy
 DOMAIN,adtidy.org,Proxy
 DOMAIN,adguard.com,Proxy
+# Unreachable DOMAIN-SUFFIX
+DOMAIN-SUFFIX,google.com,failback
+DOMAIN-SUFFIX,gitlab.com,Proxy
+DOMAIN-SUFFIX,github.com,Proxy
+DOMAIN-SUFFIX,githubusercontent.com,Proxy
+DOMAIN-SUFFIX,jsdelivr.net,Proxy
+DOMAIN-SUFFIX,pypi.org,Proxy
+DOMAIN-SUFFIX,adtidy.org,Proxy
+DOMAIN-SUFFIX,adguard.com,Proxy
 # Unreachable Custom
 DOMAIN,18comic.cc,failback
 # Proxy
