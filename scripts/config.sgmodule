@@ -17,6 +17,8 @@ PROCESS-NAME,WebTorrent,DIRECT
 PROCESS-NAME,WebTorrent Helper,DIRECT
 # Unreachable
 DOMAIN-SUFFIX,google.com,failback
+DOMAIN,gitlab.com,Proxy
+DOMAIN,github.com,Proxy
 DOMAIN-SUFFIX,gitlab.com,Proxy
 DOMAIN-SUFFIX,github.com,Proxy
 DOMAIN,raw.githubusercontent.com,Proxy
