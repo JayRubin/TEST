@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-01-21 19:05:00 ]
+#!desc=Script for Surge [ update time: 2023-01-21 23:05:00 ]
 
 [Rule]
 # Unbreak
@@ -16,18 +16,14 @@ PROCESS-NAME,UUBooster,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
 PROCESS-NAME,WebTorrent Helper,DIRECT
 # Unreachable
-DOMAIN-SUFFIX,google.com,failback
+DOMAIN,google.com,failback
 DOMAIN,gitlab.com,Proxy
 DOMAIN,github.com,Proxy
-DOMAIN-SUFFIX,gitlab.com,Proxy
-DOMAIN-SUFFIX,github.com,Proxy
 DOMAIN,raw.githubusercontent.com,Proxy
 DOMAIN,cdn.jsdelivr.net,Proxy
-DOMAIN-SUFFIX,githubusercontent.com,Proxy
-DOMAIN-SUFFIX,jsdelivr.net,Proxy
-DOMAIN-SUFFIX,pypi.org,Proxy
-DOMAIN-SUFFIX,adguard.com,Proxy
-DOMAIN-SUFFIX,adtidy.org,Proxy
+DOMAIN,pypi.org,Proxy
+DOMAIN,adtidy.org,Proxy
+DOMAIN,adguard.com,Proxy
 # Unreachable Custom
 DOMAIN,18comic.cc,failback
 # Proxy
