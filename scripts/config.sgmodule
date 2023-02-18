@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-01-29 09:45:00 ]
+#!desc=Script for Surge [ update time: 2023-02-18 12:00:00 ]
 
 [Rule]
 # Unbreak
@@ -16,6 +16,7 @@ PROCESS-NAME,UUBooster,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
 PROCESS-NAME,WebTorrent Helper,DIRECT
 # Unreachable DOMAIN
+DOMAIN,google.cn,failback
 DOMAIN,google.com,failback
 DOMAIN,gitlab.com,Proxy
 DOMAIN,github.com,Proxy
@@ -25,6 +26,7 @@ DOMAIN,pypi.org,Proxy
 DOMAIN,adtidy.org,Proxy
 DOMAIN,adguard.com,Proxy
 # Unreachable DOMAIN-SUFFIX
+DOMAIN-SUFFIX,google.cn,failback
 DOMAIN-SUFFIX,google.com,failback
 DOMAIN-SUFFIX,gitlab.com,Proxy
 DOMAIN-SUFFIX,github.com,Proxy
@@ -34,7 +36,7 @@ DOMAIN-SUFFIX,pypi.org,Proxy
 DOMAIN-SUFFIX,adtidy.org,Proxy
 DOMAIN-SUFFIX,adguard.com,Proxy
 # Unreachable Custom
-DOMAIN,18comic.cc,failback
+DOMAIN,18comic.cc,Proxy
 # Proxy
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,Proxy
