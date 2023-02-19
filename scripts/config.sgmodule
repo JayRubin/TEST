@@ -1,7 +1,9 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-02-19 14:05:00 ]
+#!desc=Script for Surge [ update time: 2023-02-19 14:45:05 ]
 
 [Rule]
+# Default
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
 # Unbreak
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,DIRECT
 # Download
