@@ -42,6 +42,7 @@ DOMAIN-SUFFIX,18comic.cc,Proxy
 DOMAIN-SUFFIX,jable.tv,Proxy
 DOMAIN-SUFFIX,javgg.net,Proxy
 DOMAIN-SUFFIX,missav.com,Proxy
+DOMAIN-SUFFIX,youavtube.com,Proxy
 # Proxy
 RULE-SET,https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Surge/TikTok.list,failback
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Proxy
