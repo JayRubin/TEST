@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-03-04 20:20:00 ]
+#!desc=Script for Surge [ update time: 2023-03-04 22:35:00 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -23,23 +23,23 @@ PROCESS-NAME,WebTorrent Helper,DIRECT
 # Unreachable DOMAIN
 DOMAIN,google.cn,failback
 DOMAIN,google.com,failback
-DOMAIN,gitlab.com,failback
-DOMAIN,github.com,failback
-DOMAIN,raw.githubusercontent.com,failback
-DOMAIN,cdn.jsdelivr.net,failback
-DOMAIN,pypi.org,failback
-DOMAIN,adtidy.org,failback
-DOMAIN,adguard.com,failback
+DOMAIN,gitlab.com,Proxy
+DOMAIN,github.com,Proxy
+DOMAIN,raw.githubusercontent.com,Proxy
+DOMAIN,cdn.jsdelivr.net,Proxy
+DOMAIN,pypi.org,Proxy
+DOMAIN,adtidy.org,Proxy
+DOMAIN,adguard.com,Proxy
 # Unreachable DOMAIN-SUFFIX
 DOMAIN-SUFFIX,google.cn,failback
 DOMAIN-SUFFIX,google.com,failback
-DOMAIN-SUFFIX,gitlab.com,failback
-DOMAIN-SUFFIX,github.com,failback
-DOMAIN-SUFFIX,githubusercontent.com,failback
-DOMAIN-SUFFIX,jsdelivr.net,failback
-DOMAIN-SUFFIX,pypi.org,failback
-DOMAIN-SUFFIX,adtidy.org,failback
-DOMAIN-SUFFIX,adguard.com,failback
+DOMAIN-SUFFIX,gitlab.com,Proxy
+DOMAIN-SUFFIX,github.com,Proxy
+DOMAIN-SUFFIX,githubusercontent.com,Proxy
+DOMAIN-SUFFIX,jsdelivr.net,Proxy
+DOMAIN-SUFFIX,pypi.org,Proxy
+DOMAIN-SUFFIX,adtidy.org,Proxy
+DOMAIN-SUFFIX,adguard.com,Proxy
 # Unreachable Custom
 DOMAIN-SUFFIX,18comic.cc,Proxy
 DOMAIN-SUFFIX,jable.tv,Proxy
@@ -48,6 +48,7 @@ DOMAIN-SUFFIX,missav.com,Proxy
 DOMAIN-SUFFIX,youavtube.com,Proxy
 
 # Unbreak
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Unbreak-d.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Unbreak-p.list,Proxy
@@ -57,33 +58,49 @@ RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Mobi
 RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Advertising.list,REJECT
 RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Hijacking.list,REJECT
 
+# Proxy for Google
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list,failback
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleDrive/GoogleDrive.list,failback
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikipedia/Wikipedia.list,failback
+
+# Proxy for Apple
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleTV/AppleTV.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleNews/AppleNews.list,Proxy
+
 # Proxy for Developer
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Google.list,failback
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Github.list,failback
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/GitBook.list,failback
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Developer.list,failback
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Amazon/Amazon.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitBook/GitBook.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitLab/GitLab.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Developer/Developer.list,Proxy
 
 # Proxy for Microsoft
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Microsoft.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/OneDrive.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list,Proxy
 
 # Proxy for Others
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Wikipedia.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Telegram.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Twitter.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/TikTok.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/YouTube.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list,Proxy
+
+# # DIRECT for Others
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Baidu/Baidu.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Weibo/Weibo.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Zhihu/Zhihu.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AliPay/AliPay.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GaoDe/GaoDe.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/MeiTuan/MeiTuan.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Eleme/Eleme.list,DIRECT
 
 # Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/StreamingJP.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Streaming.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Global.list,Proxy
-
-# Proxy by DivineEngine
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,Proxy
 
-# DIRECT by DivineEngine
+# DIRECT
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list,DIRECT
 
 # End
@@ -239,4 +256,4 @@ amplifi.lan = server:syslib
 skip-server-cert-verify = true
 tcp-connection = true
 h2 = true
-hostname = %APPEND% www.google.cn, www.g.cn, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
+hostname = %APPEND% www.amazon.com, www.google.cn, www.g.cn, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
