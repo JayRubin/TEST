@@ -51,7 +51,6 @@ DOMAIN-SUFFIX,youavtube.com,Proxy
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Unbreak-d.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Unbreak-p.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/iCloud.list,Proxy
 
 # REJECT
 RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/MobileAd.list,REJECT
