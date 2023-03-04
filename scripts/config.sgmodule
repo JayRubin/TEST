@@ -1,12 +1,15 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-02-19 20:50:00 ]
+#!desc=Script for Surge [ update time: 2023-03-04 20:15:00 ]
 
 [Rule]
-# Default
-AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-# Unbreak
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,DIRECT
-# Download
+# 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
+
+# 屏蔽UDP 443端口
+# AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+# 屏蔽YouTube UDP请求
+# AND,((PROTOCOL,UDP),(DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
+
+# DIRECT Download
 PROCESS-NAME,aria2c,DIRECT
 PROCESS-NAME,fdm,DIRECT
 PROCESS-NAME,Folx,DIRECT
@@ -20,40 +23,79 @@ PROCESS-NAME,WebTorrent Helper,DIRECT
 # Unreachable DOMAIN
 DOMAIN,google.cn,failback
 DOMAIN,google.com,failback
-DOMAIN,gitlab.com,Proxy
-DOMAIN,github.com,Proxy
-DOMAIN,raw.githubusercontent.com,Proxy
-DOMAIN,cdn.jsdelivr.net,Proxy
-DOMAIN,pypi.org,Proxy
-DOMAIN,adtidy.org,Proxy
-DOMAIN,adguard.com,Proxy
+DOMAIN,gitlab.com,failback
+DOMAIN,github.com,failback
+DOMAIN,raw.githubusercontent.com,failback
+DOMAIN,cdn.jsdelivr.net,failback
+DOMAIN,pypi.org,failback
+DOMAIN,adtidy.org,failback
+DOMAIN,adguard.com,failback
 # Unreachable DOMAIN-SUFFIX
 DOMAIN-SUFFIX,google.cn,failback
 DOMAIN-SUFFIX,google.com,failback
-DOMAIN-SUFFIX,gitlab.com,Proxy
-DOMAIN-SUFFIX,github.com,Proxy
-DOMAIN-SUFFIX,githubusercontent.com,Proxy
-DOMAIN-SUFFIX,jsdelivr.net,Proxy
-DOMAIN-SUFFIX,pypi.org,Proxy
-DOMAIN-SUFFIX,adtidy.org,Proxy
-DOMAIN-SUFFIX,adguard.com,Proxy
+DOMAIN-SUFFIX,gitlab.com,failback
+DOMAIN-SUFFIX,github.com,failback
+DOMAIN-SUFFIX,githubusercontent.com,failback
+DOMAIN-SUFFIX,jsdelivr.net,failback
+DOMAIN-SUFFIX,pypi.org,failback
+DOMAIN-SUFFIX,adtidy.org,failback
+DOMAIN-SUFFIX,adguard.com,failback
 # Unreachable Custom
 DOMAIN-SUFFIX,18comic.cc,Proxy
 DOMAIN-SUFFIX,jable.tv,Proxy
 DOMAIN-SUFFIX,javgg.net,Proxy
 DOMAIN-SUFFIX,missav.com,Proxy
 DOMAIN-SUFFIX,youavtube.com,Proxy
+
+# Unbreak
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Unbreak-d.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Unbreak-p.list,Proxy
+
+# REJECT
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/MobileAd.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Advertising.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Hijacking.list,REJECT
+
+# Proxy for Developer
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Google.list,failback
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Github.list,failback
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/GitBook.list,failback
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Developer.list,failback
+
+# Proxy for Apple
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Apple.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/AppleProxy.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/AppleTV.list,Proxy
+
+# Proxy for Microsoft
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Microsoft.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/OneDrive.list,Proxy
+
+# Proxy for Others
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Wikipedia.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Telegram.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Twitter.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/TikTok.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/YouTube.list,Proxy
+
 # Proxy
-RULE-SET,https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Surge/TikTok.list,failback
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/StreamingJP.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Streaming.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/kokoryh/Script/master/Surge/rule/Global.list,Proxy
+
+# Proxy by DivineEngine
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,Proxy
-# DIRECT
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list,DIRECT
+
+# DIRECT by DivineEngine
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list,DIRECT
+
 # End
 RULE-SET,SYSTEM,DIRECT
 RULE-SET,LAN,DIRECT
 GEOIP,CN,DIRECT
+
 
 [URL Rewrite]
 # Redirect Google Search Service
@@ -119,6 +161,7 @@ GEOIP,CN,DIRECT
 (?<=&mcc_mnc=)4 2 307
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
 (^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+
 
 [Host]
 # > ipv6
@@ -195,6 +238,7 @@ router.asus.com = server:syslib
 hotspot.cslwifi.com = server:syslib
 amplifi.lan = server:syslib
 *.lan = server:syslib
+
 
 [MITM]
 skip-server-cert-verify = true
