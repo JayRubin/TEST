@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-03-04 23:50:00 ]
+#!desc=Script for Surge [ update time: 2023-03-05 00:05:00 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -175,10 +175,10 @@ github.com = server:8.8.8.8
 githubusercontent.com = server:8.8.8.8
 *.githubusercontent.com = server:8.8.8.8
 # > China
-taobao.com = server:223.6.6.6
-*.taobao.com = server:223.6.6.6
-tmall.com = server:223.6.6.6
-*.tmall.com = server:223.6.6.6
+taobao.com = server:223.5.5.5
+*.taobao.com = server:223.5.5.5
+tmall.com = server:223.5.5.5
+*.tmall.com = server:223.5.5.5
 jd.com = server:119.29.29.29
 *.jd.com = server:119.28.28.28
 *.qq.com = server:119.28.28.28
@@ -201,38 +201,32 @@ mi.com = server:119.29.29.29
 *.mi.com = server:119.29.29.29
 xiaomi.com = server:119.29.29.29
 *.xiaomi.com = server:119.29.29.29
-dler.cloud = server:180.76.76.76
-dleris.best = server:180.76.76.76
-# > Apple
-aaplimg.com = server:119.29.29.29
-apple.com = server:119.29.29.29
-apple.com.cn = server:119.29.29.29
-apple-cloudkit.com = server:119.29.29.29
-apple-livephotoskit.com = server:119.29.29.29
-apple-mapkit.com = server:119.29.29.29
-cdn-apple.com = server:119.29.29.29
-icloud.com = server:119.29.29.29
-icloud.com.cn = server:119.29.29.29
-mzstatic.com = server:119.29.29.29
-*.aaplimg.com = server:119.29.29.29
-*.apple.com = server:119.29.29.29
-*.apple-cloudkit.com = server:119.29.29.29
-*.apple-livephotoskit.com = server:119.29.29.29
-*.apple-mapkit.com = server:119.29.29.29
-*.cdn-apple.com = server:119.29.29.29
-*.icloud.com = server:119.29.29.29
-*.icloud.com.cn = server:119.29.29.29
-*.mzstatic.com = server:119.29.29.29
-*apple.com.akadns.net = server:119.29.29.29
-*.apple.com.edgekey.net = server:119.29.29.29
-*.apple.com.edgekey.net.globalredir.akadns.net = server:119.29.29.29
-*icloud.com.akadns.net = server:119.29.29.29
+# # > Apple
+# aaplimg.com = server:119.29.29.29
+# apple.com = server:119.29.29.29
+# apple.com.cn = server:119.29.29.29
+# apple-cloudkit.com = server:119.29.29.29
+# apple-livephotoskit.com = server:119.29.29.29
+# apple-mapkit.com = server:119.29.29.29
+# cdn-apple.com = server:119.29.29.29
+# icloud.com = server:119.29.29.29
+# icloud.com.cn = server:119.29.29.29
+# mzstatic.com = server:119.29.29.29
+# *.aaplimg.com = server:119.29.29.29
+# *.apple.com = server:119.29.29.29
+# *.apple-cloudkit.com = server:119.29.29.29
+# *.apple-livephotoskit.com = server:119.29.29.29
+# *.apple-mapkit.com = server:119.29.29.29
+# *.cdn-apple.com = server:119.29.29.29
+# *.icloud.com = server:119.29.29.29
+# *.icloud.com.cn = server:119.29.29.29
+# *.mzstatic.com = server:119.29.29.29
+# *apple.com.akadns.net = server:119.29.29.29
+# *.apple.com.edgekey.net = server:119.29.29.29
+# *.apple.com.edgekey.net.globalredir.akadns.net = server:119.29.29.29
+# *icloud.com.akadns.net = server:119.29.29.29
 # > syslib
 routerlogin.net = server:syslib
-_hotspot_.m2m = server:syslib
-router.asus.com = server:syslib
-hotspot.cslwifi.com = server:syslib
-amplifi.lan = server:syslib
 *.lan = server:syslib
 
 
