@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-03-30 15:50:00 ]
+#!desc=Script for Surge [ update time: 2023-04-18 21:05:35 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -20,8 +20,8 @@ DOMAIN-SUFFIX,missav.com,Proxy
 DOMAIN-SUFFIX,youavtube.com,Proxy
 
 # Unreachable for Google
-DOMAIN-SUFFIX,google.cn,failback
-DOMAIN-SUFFIX,google.com,failback
+DOMAIN-SUFFIX,google.cn,load-balance
+DOMAIN-SUFFIX,google.com,load-balance
 
 # Unreachable for Developer
 DOMAIN-SUFFIX,ghcr.io,Proxy
