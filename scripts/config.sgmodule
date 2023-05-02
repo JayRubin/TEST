@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-04-18 21:05:35 ]
+#!desc=Script for Surge [ update time: 2023-05-02 11:05:35 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -20,8 +20,8 @@ DOMAIN-SUFFIX,missav.com,Proxy
 DOMAIN-SUFFIX,youavtube.com,Proxy
 
 # Unreachable for Google
-DOMAIN-SUFFIX,google.cn,load-balance
-DOMAIN-SUFFIX,google.com,load-balance
+DOMAIN-SUFFIX,google.cn,autotest
+DOMAIN-SUFFIX,google.com,autotest
 
 # Unreachable for Developer
 DOMAIN-SUFFIX,ghcr.io,Proxy
@@ -34,13 +34,16 @@ DOMAIN-SUFFIX,adtidy.org,Proxy
 DOMAIN-SUFFIX,adguard.com,Proxy
 
 # Proxy for Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list,failback
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list,autotest
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleID/AppleID.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMail/AppleMail.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMedia/AppleMedia.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMusic/AppleMusic.list,DIRECT
+
+# Proxy for OpenAI
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list,failback
 
 # Proxy for Developer
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Amazon/Amazon.list,Proxy
