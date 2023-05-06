@@ -1,5 +1,5 @@
 #!name=Custom Block
-#!desc=Script for Surge [ update time: 2023-05-01 21:45:35 ]
+#!desc=Script for Surge [ update time: 2023-05-06 21:15:32 ]
 
 [Rule]
 
@@ -148,7 +148,7 @@
 ^https?:\/\/.*mangaapi\.manhuaren\.com\/v2\/ad\/getMultiAdsStrategy _ reject
 ^https?:\/\/.*mangaapi\.manhuaren\.com\/v2\/public\/getShelfActivity _ reject
 ^https?:\/\/103\.91\.210\.141\:2515\/xgapp\.php\/v2\/top_notice _ reject
-^https?:\/\/2023.04.27\/v2.0.302 _ reject
+^https?:\/\/2023.05.03\/v2.0.304 _ reject
 ^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement _ reject
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis _ reject
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject
@@ -279,6 +279,22 @@
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jpg\.webp)$ _ reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ _ reject
 ^https?:\/\/img\.meituan\.net\/(bizad|brandCpt)\/\w+\.(png|jpg) _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api/homepage/daily/song/elf/notice _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/ _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/feed\/inserted _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/hotcomment\/collect _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ios\/upgrade _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/position\/show\/resource _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/scene\/show\/resource _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/resource-exposure\/activity\/config _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default\/keyword _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/rcmd\/keyword _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/specialkeyword _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/sp\/flow _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/v1\/content\/exposure\/comment _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/vipcenter/tspopup\/get _ reject
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?eapi\/resource-exposure\/config _ reject
 ^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(getSystemConf|bootScreen) _ reject
 ^https?:\/\/jad-api\.jin10\.com\/ad _ reject
 ^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens _ reject
@@ -330,7 +346,7 @@
 ^https?:\/\/res.kfc.com.cn\/advertisement\/ _ reject
 ^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome _ reject
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo _ reject
-^https?:\/\/run\.api\.qyfxgd\.cn:9313\/api\/v1\/advert _ reject
+^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v1\/advert _ reject
 ^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4) _ reject
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/.*?\/v\d\/(version|top_notice\?|advert\?position=[^2]+) _ reject
@@ -474,17 +490,17 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 0087 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/Wechat.js
 0088 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/open-cms-api\.uc\.cn\/open-cms, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js
 0089 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/wnyd.js
-0090 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice), script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/kuwo.js
-0091 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-0092 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-0093 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-0094 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-0095 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
-0096 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js
-0097 = type=http-response, script-update-interval=86400, requires-body=true, pattern=http://ipadcms.caixin.com/tmp/articles/*, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/cxzk.js
-0098 = type=http-response, script-update-interval=86400, requires-body=true, pattern=https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow, script-path=https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js
-0099 = type=http-response, script-update-interval=86400, requires-body=true, pattern=https:\//www.tianya.cn\/m\/vip\/, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/tianya/vip1.js
-0100 = type=http-response, script-update-interval=86400, requires-body=true, pattern=https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/bdcloud.js
+0090 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v\d\/movie\/index_recommend, script-path=https://github.com/ddgksf2013/Scripts/raw/master/555Ad.js
+0091 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice), script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/kuwo.js
+0092 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+0093 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+0094 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+0095 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+0096 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+0097 = type=http-response, script-update-interval=86400, requires-body=true, pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js
+0098 = type=http-response, script-update-interval=86400, requires-body=true, pattern=http://ipadcms.caixin.com/tmp/articles/*, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/cxzk.js
+0099 = type=http-response, script-update-interval=86400, requires-body=true, pattern=https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow, script-path=https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js
+0100 = type=http-response, script-update-interval=86400, requires-body=true, pattern=https:\//www.tianya.cn\/m\/vip\/, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/tianya/vip1.js
 0101 = type=http-response, script-update-interval=86400, requires-body=true, pattern=https:\/\/vip.hupu.com\/api\/vip\/userInfo, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/hupu.js
 0102 = type=http-response, script-update-interval=86400, requires-body=true, pattern=https:\/\/www\.xmind\.cn\/\_res\/devices, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/XMind.js
 
