@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-05-02 11:05:35 ]
+#!desc=Script for Surge [ update time: 2023-05-14 19:35:30 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -17,6 +17,7 @@ DOMAIN-SUFFIX,18comic.cc,load-balance
 DOMAIN-SUFFIX,jable.tv,Proxy
 DOMAIN-SUFFIX,javgg.net,Proxy
 DOMAIN-SUFFIX,missav.com,Proxy
+DOMAIN-SUFFIX,supjav.com,Proxy
 DOMAIN-SUFFIX,youavtube.com,Proxy
 
 # Unreachable for Google
