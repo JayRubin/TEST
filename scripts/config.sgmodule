@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-08-15 08:10:00 ]
+#!desc=Script for Surge [ update time: 2023-08-15 20:30:00 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -11,7 +11,7 @@
 # AND,((PROTOCOL,UDP),(DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
 
 # 修正Apple Store请求
-AND,((DOMAIN,iosapps.itunes.apple.com)),Apple
+AND,((DOMAIN,iosapps.itunes.apple.com)),DIRECT
 
 # Unbreak
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list,DIRECT
@@ -27,6 +27,7 @@ DOMAIN-SUFFIX,missav.com,Proxy
 DOMAIN-SUFFIX,supjav.com,Proxy
 DOMAIN-SUFFIX,youavtube.com,Proxy
 DOMAIN,m.ddxs.com,Proxy
+DOMAIN,m.ibiquge.cc,Proxy
 
 # Unreachable for Google
 DOMAIN-SUFFIX,google.cn,autotest
@@ -43,13 +44,13 @@ DOMAIN-SUFFIX,adtidy.org,Proxy
 DOMAIN-SUFFIX,adguard.com,Proxy
 
 # Proxy for Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list,Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list,Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleID/AppleID.list,Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list,Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMail/AppleMail.list,Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMedia/AppleMedia.list,Apple
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMusic/AppleMusic.list,Apple
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleID/AppleID.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMail/AppleMail.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMedia/AppleMedia.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMusic/AppleMusic.list,DIRECT
 
 # Proxy for OpenAI
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list,load-balance-USA
@@ -84,6 +85,7 @@ RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ru
 RULE-SET,SYSTEM,DIRECT
 RULE-SET,LAN,DIRECT
 GEOIP,CN,DIRECT
+FINAL,Others,dns-failed
 
 
 [URL Rewrite]
