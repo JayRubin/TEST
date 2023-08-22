@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-08-15 20:30:00 ]
+#!desc=Script for Surge [ update time: 2023-08-22 21:55:00 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -13,23 +13,22 @@
 # 修正Apple Store请求
 AND,((DOMAIN,iosapps.itunes.apple.com)),DIRECT
 
-# Unbreak
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list,DIRECT
-
-# Unbreak for Custom
+# Unreachable for Custom
 DOMAIN,console.bywa.art,DIRECT
 
 # Unreachable for Custom
+DOMAIN,m.ddxs.com,Proxy
+DOMAIN,m.ibiquge.cc,Proxy
+DOMAIN,m.biqu520.net,Proxy
 DOMAIN-SUFFIX,18comic.vip,load-balance-USA
 DOMAIN-SUFFIX,jable.tv,Proxy
 DOMAIN-SUFFIX,javgg.net,Proxy
 DOMAIN-SUFFIX,missav.com,Proxy
 DOMAIN-SUFFIX,supjav.com,Proxy
 DOMAIN-SUFFIX,youavtube.com,Proxy
-DOMAIN,m.ddxs.com,Proxy
-DOMAIN,m.ibiquge.cc,Proxy
 
 # Unreachable for Google
+DOMAIN-KEYWORD,www.google.,autotest
 DOMAIN-SUFFIX,google.cn,autotest
 DOMAIN-SUFFIX,google.com,autotest
 
@@ -42,8 +41,45 @@ DOMAIN-SUFFIX,jsdelivr.net,Proxy
 DOMAIN-SUFFIX,pypi.org,Proxy
 DOMAIN-SUFFIX,adtidy.org,Proxy
 DOMAIN-SUFFIX,adguard.com,Proxy
+DOMAIN-SUFFIX,compose-spec.io,Proxy
+DOMAIN-SUFFIX,docker.com,Proxy
+DOMAIN-SUFFIX,docker.io,Proxy
+DOMAIN-SUFFIX,dockerhub.com,Proxy
 
-# Proxy for Apple
+# Direct
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list,DIRECT
+
+# Operators
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMobile/ChinaMobile.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaUnicom/ChinaUnicom.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaTelecom/ChinaTelecom.list,DIRECT
+
+# Applications
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Baidu/Baidu.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Weibo/Weibo.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Zhihu/Zhihu.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HuYa/HuYa.list,DIRECT
+
+# China
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China.list,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_Domain.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,DIRECT
+
+# # Advertising
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising.list,REJECT
+# DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising_Domain.list,REJECT
+
+# # Privacy
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Privacy/Privacy.list,REJECT
+# DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Privacy/Privacy_Domain.list,REJECT
+
+# # Hijacking
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Hijacking/Hijacking.list,REJECT
+
+# Apple
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleID/AppleID.list,DIRECT
@@ -51,35 +87,43 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMail/AppleMail.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMedia/AppleMedia.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMusic/AppleMusic.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list,Proxy
 
-# Proxy for OpenAI
+# OpenAI
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list,load-balance-USA
 
-# Proxy for Developer
+# Developer
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Amazon/Amazon.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitBook/GitBook.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitLab/GitLab.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Docker/Docker.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Developer/Developer.list,Proxy
 
-# Proxy for Microsoft
+# Microsoft
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Bing/Bing.list,load-balance-USA
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list,Proxy
 
-# Proxy for Applications
+# Applications
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,Proxy
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list,Proxy
 
-# Proxy by DivineEngine
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Proxy
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,Proxy
+# Global
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global.list,Proxy
+DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global_Domain.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_Domain.list,Proxy
 
-# DIRECT by DivineEngine
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list,DIRECT
+# # Proxy by DivineEngine
+# RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Proxy
+# RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,Proxy
+
+# # DIRECT by DivineEngine
+# RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list,DIRECT
 
 # End
 RULE-SET,SYSTEM,DIRECT
