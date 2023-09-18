@@ -11,12 +11,15 @@
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list,DIRECT
 
+# Unreachable for bywave
+DOMAIN,user.by.icu,DIRECT
+DOMAIN,bywave.crisp.help,DIRECT
+
 # Unreachable for Custom
-DOMAIN,console.bywa.art,DIRECT
-DOMAIN,m.ddxs.com,DIRECT
-DOMAIN,m.aixdzs.com,autotest
-DOMAIN,m.ibiquge.cc,DIRECT
-DOMAIN,m.biqu520.net,DIRECT
+DOMAIN-KEYWORD,m.ddxs.,autotest
+DOMAIN-KEYWORD,m.aixdzs.,autotest
+DOMAIN-KEYWORD,m.ibiquge.,DIRECT
+DOMAIN-KEYWORD,m.biqu520.,DIRECT
 
 # Unreachable for Common
 DOMAIN-KEYWORD,www.google.,autotest
