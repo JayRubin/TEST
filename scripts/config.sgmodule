@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-09-18 14:30:00 ]
+#!desc=Script for Surge [ update time: 2023-10-03 23:30:00 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -12,8 +12,8 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list,DIRECT
 
 # Unreachable for bywave
-DOMAIN,user.by.icu,DIRECT
-DOMAIN,bywave.crisp.help,DIRECT
+DOMAIN,user.by.icu,autotest
+DOMAIN,bywave.crisp.help,autotest
 
 # Unreachable for Custom
 DOMAIN-KEYWORD,m.ddxs.,autotest
