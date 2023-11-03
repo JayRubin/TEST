@@ -1,5 +1,5 @@
 #!name=Custom Rule
-#!desc=Script for Surge [ update time: 2023-11-03 09:15:00 ]
+#!desc=Script for Surge [ update time: 2023-11-03 09:30:00 ]
 
 [Rule]
 # 建议顺序：规则修正 - reject - 国外流媒体 - 国外分流 - 可能会代理但也可以直连的分流(如B站，Apple) - 国内分流 - 中国IP/中国ASN
@@ -19,6 +19,7 @@ DOMAIN-KEYWORD,m.ddxs.,autotest
 DOMAIN-KEYWORD,m.aixdzs.,autotest
 DOMAIN-KEYWORD,m.ibiquge.,DIRECT
 DOMAIN-KEYWORD,m.biqu520.,DIRECT
+DOMAIN-KEYWORD,.tesla.cn,DIRECT
 
 # Unreachable for Common
 DOMAIN-KEYWORD,www.google.,autotest
