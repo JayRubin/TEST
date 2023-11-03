@@ -60,12 +60,6 @@ DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia.list,Proxy
 DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_Domain.list,Proxy
 
-# Ends
-RULE-SET,SYSTEM,DIRECT
-RULE-SET,LAN,DIRECT
-GEOIP,CN,DIRECT
-FINAL,Others,dns-failed
-
 
 [URL Rewrite]
 # Redirect Google Search Service
