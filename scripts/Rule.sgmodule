@@ -15,17 +15,17 @@ DOMAIN,user.by.icu,autotest
 DOMAIN,bywave.crisp.help,autotest
 
 # Unreachable for Custom
-DOMAIN-KEYWORD,m.ddxs.,autotest
-DOMAIN-KEYWORD,m.aixdzs.,autotest
+DOMAIN-KEYWORD,.tesla.cn,DIRECT
 DOMAIN-KEYWORD,m.ibiquge.,DIRECT
 DOMAIN-KEYWORD,m.biqu520.,DIRECT
-DOMAIN-KEYWORD,.tesla.cn,DIRECT
+DOMAIN-KEYWORD,m.aixdzs.,autotest
+DOMAIN-KEYWORD,m.ddxs.,autotest
 
 # Unreachable for Common
-DOMAIN-KEYWORD,www.google.,autotest
-DOMAIN-KEYWORD,www.github.,autotest
-DOMAIN-KEYWORD,www.raw.githubusercontent.,autotest
-DOMAIN-KEYWORD,www.gist.githubusercontent.,autotest
+DOMAIN-KEYWORD,.google.,autotest
+DOMAIN-KEYWORD,.github.,autotest
+DOMAIN-KEYWORD,.raw.githubusercontent.,autotest
+DOMAIN-KEYWORD,.gist.githubusercontent.,autotest
 
 # Microsoft
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list,load-balance-USA
