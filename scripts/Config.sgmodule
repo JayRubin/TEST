@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-11-06 19:30:00 ]
+#!desc=Script for Surge [ update time: 2023-11-20 18:00:00 ]
 
 
 [Rule]
@@ -14,13 +14,13 @@ DOMAIN,bywave.crisp.help,autotest
 DOMAIN-KEYWORD,.google.,autotest
 DOMAIN-KEYWORD,.github.,autotest
 DOMAIN-KEYWORD,.githubusercontent.,autotest
-DOMAIN-KEYWORD,.adtidy.,autotest
+DOMAIN-KEYWORD,.adtidy.,Proxy
 
 # Unreachable for Read
 DOMAIN-KEYWORD,m.ibiquge.,DIRECT
 DOMAIN-KEYWORD,m.biqu520.,DIRECT
-DOMAIN-KEYWORD,m.aixdzs.,autotest
-DOMAIN-KEYWORD,m.ddxs.,autotest
+DOMAIN-KEYWORD,m.aixdzs.,Proxy
+DOMAIN-KEYWORD,m.ddxs.,Proxy
 
 # Unreachable for Custom
 DOMAIN-KEYWORD,.tesla.cn,DIRECT
