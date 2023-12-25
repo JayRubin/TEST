@@ -1,5 +1,5 @@
 #!name=Custom Config
-#!desc=Script for Surge [ update time: 2023-12-26 23:00:00 ]
+#!desc=Script for Surge [ update time: 2023-12-25 22:30:00 ]
 
 
 [Rule]
@@ -23,8 +23,8 @@ DOMAIN-KEYWORD,.aixdzs.,Proxy
 DOMAIN-KEYWORD,.ddxs.,Proxy
 
 # Unreachable for Custom
-DOMAIN-KEYWORD,.tesla.,DIRECT
 DOMAIN-KEYWORD,.netease.,DIRECT
+DOMAIN-KEYWORD,.tesla.,DIRECT
 DOMAIN-KEYWORD,.webex.,DIRECT
 DOMAIN-KEYWORD,.wbx2.,DIRECT
 
